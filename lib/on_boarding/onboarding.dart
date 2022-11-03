@@ -1,1 +1,1 @@
-export 'interface/onboarding_interface.dart';
+export 'screen/onboarding_screen.dart';
