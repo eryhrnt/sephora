@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/register/register1.dart';
 import 'on_boarding/onboarding.dart';
 
 void main() {
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoardingInterface(title: 'Flutter Demo Home Page'),
+      home: const RegisterScreen(title: 'Flutter Demo Home Page'),
     );
   }
 }
