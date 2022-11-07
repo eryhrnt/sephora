@@ -11,8 +11,56 @@ class TextRegister extends StatelessWidget {
         const TextField(
           obscureText: true,
           decoration: InputDecoration(
-              filled: true, fillColor: Color(0xFFF3F7FD), hintText: 'NIK'),
-        )
+              filled: true,
+              fillColor: Color(0xFFF3F7FD),
+              hintText: 'NIK',
+              border: OutlineInputBorder()),
+        ),
+        SizedBox(height: 20),
+        const TextField(
+          obscureText: true,
+          decoration: InputDecoration(
+              filled: true,
+              fillColor: Color(0xFFF3F7FD),
+              hintText: 'No. Telepon',
+              border: OutlineInputBorder()),
+        ),
+        SizedBox(height: 20),
+        const TextField(
+          obscureText: true,
+          decoration: InputDecoration(
+              filled: true,
+              fillColor: Color(0xFFF3F7FD),
+              hintText: 'Nama Lengkap',
+              border: OutlineInputBorder()),
+        ),
+        SizedBox(height: 20),
+        Stack(
+          children: [
+            TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Color(0xFFF3F7FD),
+                hintText: 'Tanggal Lahir',
+                border: OutlineInputBorder(),
+                suffixIcon: IconButton(
+                  onPressed: () {},
+                  icon: Icon(Icons.date_range),
+                ),
+              ),
+            ),
+          ],
+        ),
+        SizedBox(height: 20),
+        const TextField(
+          obscureText: true,
+          decoration: InputDecoration(
+              filled: true,
+              fillColor: Color(0xFFF3F7FD),
+              hintText: 'Email',
+              border: OutlineInputBorder()),
+        ),
       ]),
     );
   }
