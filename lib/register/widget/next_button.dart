@@ -7,6 +7,7 @@ class NextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.only(bottom: 50),
       width: MediaQuery.of(context).size.width,
       decoration: BoxDecoration(
           color: Colors.white,
@@ -20,8 +21,13 @@ class NextButton extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: ElevatedButton(
-          onPressed: () {},
-          child: const Text('Selanjutnya'),
+          onPressed: () {
+            onPressed();
+          },
+          child: const Text(
+            'Selanjutnya',
+            style: TextStyle(fontSize: 14),
+          ),
         ),
       ),
     );

@@ -60,7 +60,7 @@ flutter:
   uses-material-design: true
   assets:
   - assets/on_boarding/
-  - assets/register1/
+  - assets/register/
 
   # To add assets to your application, add an assets section, like this:
   # assets:
