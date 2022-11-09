@@ -19,7 +19,7 @@ class TextRegister extends StatelessWidget {
             hintText: hint,
             hintStyle: TextStyle(fontSize: 14),
             border: OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.transparent),
+              borderSide: BorderSide.none,
             ),
           ),
         ),
@@ -49,7 +49,7 @@ class DateRegister extends StatelessWidget {
                   hintText: hint,
                   hintStyle: TextStyle(fontSize: 14),
                   border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent),
+                    borderSide: BorderSide.none,
                   ),
                   suffixIcon: IconButton(
                     icon: Icon(Icons.date_range),
@@ -84,7 +84,7 @@ class PasswordText extends StatelessWidget {
                   hintText: pass,
                   hintStyle: TextStyle(fontSize: 14),
                   border: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.transparent),
+                    borderSide: BorderSide.none,
                   ),
                   suffixIcon: IconButton(
                     icon: Icon(Icons.remove_red_eye),
