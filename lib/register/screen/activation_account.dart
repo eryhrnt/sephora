@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/register/register1.dart';
 import '../widget/next_button.dart';
 import '../widget/register_appbar.dart';
 import '../widget/text_register.dart';
@@ -132,12 +133,13 @@ class _ActivationScreenState extends State<ActivationScreen> {
               ),
               NextButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const (),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          const MpinScreen(title: 'Buat MPIN'),
+                    ),
+                  );
                 },
               )
             ],

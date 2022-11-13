@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/register/screen/term_condition_screen.dart';
 
 import '../widget/next_button.dart';
 import '../widget/register_appbar.dart';
@@ -115,12 +116,14 @@ class _MpinScreenState extends State<MpinScreen> {
               ),
               NextButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const (),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const TermAndConditionScreen(
+                        title: 'Syarat & Ketentuan',
+                      ),
+                    ),
+                  );
                 },
               )
             ],
