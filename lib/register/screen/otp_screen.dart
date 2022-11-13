@@ -1,3 +1,6 @@
+import 'dart:async';
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:sephora/register/widget/register_appbar.dart';
 
@@ -5,13 +8,48 @@ import '../widget/otp_digit_container.dart';
 import '../widget/otp_keyboard.dart';
 
 class OtpScreen extends StatefulWidget {
-  const OtpScreen({Key? key}) : super(key: key);
+  const OtpScreen({
+    Key? key,
+    required String title,
+  }) : super(key: key);
 
   @override
   State<OtpScreen> createState() => _OtpScreenState();
 }
 
 class _OtpScreenState extends State<OtpScreen> {
+  final _otpLength = 6;
+  var _otpValue = '';
+  Timer? _timer;
+
+  late int _timeLeft;
+  final _totalSecond = 270;
+
+  @override
+  void initState() {
+    _timeLeft = _totalSecond;
+    super.initState();
+    _timer = Timer.periodic(
+      const Duration(seconds: 1),
+      (timer) {
+        setState(() {
+          _timeLeft--;
+        });
+
+        if (_timeLeft == 0) {
+          showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: Text('End'),
+              content: Text('Waktu Habis'),
+            ),
+          );
+          _timer!.cancel();
+        }
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -33,7 +71,7 @@ class _OtpScreenState extends State<OtpScreen> {
               ),
               SizedBox(height: 30),
               Text(
-                '04 : 30',
+                formatTime(_timeLeft),
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w600,
@@ -55,18 +93,62 @@ class _OtpScreenState extends State<OtpScreen> {
                 ),
               ),
               SizedBox(height: 30),
-              OtpDigitContainer(),
+              OtpDigitContainer(
+                otpLength: _otpLength,
+                otpValue: _otpValue,
+              ),
               SizedBox(height: 30),
               TextButton(
                 onPressed: () {},
                 child: Text('Kirim Ulang'),
               ),
               SizedBox(height: 30),
-              Expanded(child: OtpKeyboard()),
+              Expanded(
+                child: OtpKeyboard(
+                  onChanged: (String value) {
+                    if (value == 'Delete') {
+                      _deleteLastChar();
+                    }
+                    if (_otpValue.length < _otpLength) {
+                      if (value != 'Delete') {
+                        setState(
+                          () {
+                            _otpValue += value;
+                          },
+                        );
+                      }
+                    }
+
+                    print(_otpValue);
+                  },
+                ),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  void _deleteLastChar() {
+    if (_otpValue.isNotEmpty) {
+      final split = _otpValue.split('');
+      split.removeLast();
+      final join = split.join('');
+
+      setState(
+        () {
+          _otpValue = join;
+        },
+      );
+    }
+  }
+
+  String formatTime(int seconds) {
+    final duration = Duration(seconds: _timeLeft).toString();
+    final firstSplit = duration.split('.').first;
+    final removeFirstDigit = firstSplit.split(':')..removeAt(0);
+    final cleanTimer = removeFirstDigit.join(':');
+    return cleanTimer;
   }
 }
