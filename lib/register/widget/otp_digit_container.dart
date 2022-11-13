@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
 
-class OtpDigitContainer extends StatelessWidget {
-  const OtpDigitContainer({Key? key}) : super(key: key);
+class OtpDigitContainer extends StatefulWidget {
+  const OtpDigitContainer({
+    Key? key,
+    required this.otpValue,
+    required this.otpLength,
+  }) : super(key: key);
 
+  final String otpValue;
+  final int otpLength;
+
+  @override
+  State<OtpDigitContainer> createState() => _OtpDigitContainerState();
+}
+
+class _OtpDigitContainerState extends State<OtpDigitContainer> {
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        OtpDigitItem(active: false),
-        OtpDigitItem(active: false),
-        OtpDigitItem(active: false),
-        OtpDigitItem(active: false),
-        OtpDigitItem(active: false),
-        OtpDigitItem(active: false),
-      ],
+      children: List.generate(widget.otpLength, (index) => index + 1).map((e) {
+        return OtpDigitItem(active: e <= widget.otpValue.length);
+      }).toList(),
     );
   }
 }
