@@ -107,12 +107,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               NextButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => const OtpScreen(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const OtpScreen(
+                        title: 'OTP',
+                      ),
+                    ),
+                  );
                 },
               )
             ],
