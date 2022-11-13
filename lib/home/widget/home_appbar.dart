@@ -11,16 +11,24 @@ class HomeAppBar extends StatelessWidget {
           width: 46,
           height: 46,
           decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  offset: Offset(0, 3),
-                  blurRadius: 10,
-                  spreadRadius: 0,
-                )
-              ]),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey,
+                offset: Offset(0, 3),
+                blurRadius: 10,
+                spreadRadius: 0,
+              )
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: Image(
+              fit: BoxFit.cover,
+              image: AssetImage('assets/home/profile.jpg'),
+            ),
+          ),
         ),
         SizedBox(width: 12),
         Expanded(

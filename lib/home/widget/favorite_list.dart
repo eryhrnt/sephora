@@ -1,5 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:sephora/home/widget/home_section.dart';
 
 class FavoriteList extends StatelessWidget {
   const FavoriteList({super.key});
@@ -9,45 +10,29 @@ class FavoriteList extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text(
-                'Daftar Favorit',
-                style: TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              TextButton(
-                onPressed: () {},
-                child: Text(
-                  'Lihat Semua',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              )
-            ],
+          HomeSection(
+            title: 'Daftar Favorit',
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              BorderList(),
-              BankAccountList(
-                imageProvider: AssetImage('assets/home/mandiri.png'),
-                label: 'Ery Harinanto',
-              ),
-              BankAccountList(
-                imageProvider: AssetImage('assets/home/bri.png'),
-                label: 'Kevin Raihan Saleh',
-              ),
-              BankAccountList(
-                imageProvider: AssetImage('assets/home/jenius.png'),
-                label: 'Abiel Aditya Pratama',
-              ),
-            ],
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                BorderList(),
+                BankAccountList(
+                  imageProvider: AssetImage('assets/home/mandiri.png'),
+                  label: 'Ery Harinanto',
+                ),
+                BankAccountList(
+                  imageProvider: AssetImage('assets/home/bri.png'),
+                  label: 'Kevin Raihan Saleh',
+                ),
+                BankAccountList(
+                  imageProvider: AssetImage('assets/home/jenius.png'),
+                  label: 'Abiel Aditya Pratama',
+                ),
+              ],
+            ),
           )
         ],
       ),

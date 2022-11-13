@@ -11,10 +11,14 @@ class JumbotronBack extends StatelessWidget {
       padding: EdgeInsets.all(20),
       margin: EdgeInsets.only(bottom: 40),
       decoration: BoxDecoration(
-          color: Colors.blue,
+          color: Color(0xFF4728F4),
           borderRadius: BorderRadius.circular(15),
           boxShadow: [
-            BoxShadow(),
+            BoxShadow(
+              color: Colors.black.withOpacity(0.5),
+              offset: Offset(0, 3),
+              blurRadius: 12,
+            ),
           ]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -7,16 +7,17 @@ class ActivationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0, 3),
-              blurRadius: 10,
-              spreadRadius: 0,
-            )
-          ]),
+        borderRadius: BorderRadius.circular(15),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0, 3),
+            blurRadius: 10,
+            spreadRadius: 0,
+          ),
+        ],
+      ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Row(
