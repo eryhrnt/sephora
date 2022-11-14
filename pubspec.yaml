@@ -66,6 +66,7 @@ flutter:
   - assets/on_boarding/
   - assets/register/
   - assets/home/
+  - assets/notification/
 
   # To add assets to your application, add an assets section, like this:
   # assets:

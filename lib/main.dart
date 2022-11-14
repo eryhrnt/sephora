@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sephora/home/home.dart';
+import 'package:sephora/notification/notification.dart';
 import 'package:sephora/register/register1.dart';
 import 'package:sephora/register/screen/activation_account.dart';
 import 'package:sephora/register/screen/mpin_screen.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(title: 'Flutter Demo Home Page'),
+      home: const NotificationScreen(title: 'Flutter Demo Home Page'),
     );
   }
 }
