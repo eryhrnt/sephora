@@ -82,11 +82,11 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-}
 
-var iconList = [
-  Icons.home,
-  Icons.article_outlined,
-  Icons.star,
-  Icons.person,
-];
+  var iconList = [
+    Icons.home,
+    Icons.article_outlined,
+    Icons.star,
+    Icons.person,
+  ];
+}

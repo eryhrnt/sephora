@@ -79,6 +79,7 @@ class JumbotronBack extends StatelessWidget {
                   fontSize: 24,
                   fontWeight: FontWeight.w500,
                   color: Colors.white,
+                  letterSpacing: 2,
                 ),
               ),
               SizedBox(width: 14),
