@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:sephora/notification/widget/notification_date.dart';
-import 'package:sephora/notification/widget/promo_card.dart';
 import 'package:sephora/notification/widget/transaction_card.dart';
 
-class AllNotification extends StatelessWidget {
-  const AllNotification({super.key});
+import 'notification_date.dart';
+
+class TransactionNotif extends StatelessWidget {
+  const TransactionNotif({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20),
       child: ListView(
-        scrollDirection: Axis.vertical,
         children: <Widget>[
           DateNotification(
             date: '12 Januari 2022',
@@ -27,10 +26,6 @@ class AllNotification extends StatelessWidget {
             info: 'Ahmad Alfiansyah - 4434 5384 3478',
             amount: 150000000,
           ),
-          SizedBox(height: 15),
-          PromoCard(
-            label: 'Promo Cashback Belanja Pulsa Dengan OVO',
-          ),
           SizedBox(height: 25),
           DateNotification(
             date: '11 Januari 2022',
@@ -42,6 +37,18 @@ class AllNotification extends StatelessWidget {
             ),
             tfImage: AssetImage(
               'assets/home/bri.png',
+            ),
+            info: 'Ahmad Alfiansyah - 4434 5384 3478',
+            amount: 150000000,
+          ),
+          SizedBox(height: 15),
+          TransactionCard(
+            tf: "Transfer Masuk",
+            imageProvider: AssetImage(
+              'assets/notification/tf_in.png',
+            ),
+            tfImage: AssetImage(
+              'assets/home/jenius.png',
             ),
             info: 'Ahmad Alfiansyah - 4434 5384 3478',
             amount: 150000000,

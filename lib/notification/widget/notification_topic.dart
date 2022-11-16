@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TopicNotification extends StatelessWidget {
-  const TopicNotification({super.key});
+  const TopicNotification({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
