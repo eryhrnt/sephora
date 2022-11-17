@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:sephora/app_theme.dart';
 import 'package:sephora/notification/widget/notification_date.dart';
 
 class TransactionCard extends StatelessWidget {
@@ -24,10 +25,6 @@ class TransactionCard extends StatelessWidget {
       child: Column(
         children: [
           Card(
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-            ),
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Column(
@@ -67,7 +64,7 @@ class TransactionCard extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFFF3F7FD),
+                          color: AppTheme.background,
                           borderRadius: BorderRadius.circular(12),
                         ),
                         padding: EdgeInsets.all(10),

@@ -9,8 +9,6 @@ class JumbotronFront extends StatelessWidget {
       height: 81,
       child: Card(
         margin: EdgeInsets.symmetric(horizontal: 12),
-        elevation: 7,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         child: Row(
           children: [
             Expanded(

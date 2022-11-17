@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 
 class NotificationAppBar extends StatelessWidget {
   const NotificationAppBar({super.key, required this.onPressed, this.title});
@@ -29,7 +30,7 @@ class NotificationAppBar extends StatelessWidget {
               width: 14,
               height: 10,
             ),
-            color: Color(0xFF2F82FF),
+            color: AppTheme.primary,
           ),
         ),
         Text(

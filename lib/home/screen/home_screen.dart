@@ -1,5 +1,6 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 import 'package:sephora/home/widget/activation_bar.dart';
 import 'package:sephora/home/widget/favorite_list.dart';
 import 'package:sephora/home/widget/history_transaction.dart';
@@ -18,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFF3F7FD),
         body: Column(
           children: [
             Expanded(
@@ -69,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
             offset: Offset(0, -3),
           ),
           backgroundColor: Colors.white,
-          activeColor: Colors.blue,
+          activeColor: AppTheme.primary,
           inactiveColor: Color(0xFFBCC8E7),
           gapLocation: GapLocation.center,
           notchSmoothness: NotchSmoothness.softEdge,

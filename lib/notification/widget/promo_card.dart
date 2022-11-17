@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 
 class PromoCard extends StatelessWidget {
   const PromoCard({super.key, required this.label});
@@ -9,12 +10,8 @@ class PromoCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
-        elevation: 5,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15),
-        ),
         child: Padding(
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(AppTheme.mainPadding),
           child: Column(
             children: [
               Row(

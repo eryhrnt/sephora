@@ -11,7 +11,6 @@ class TermAndConditionScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: const Color(0xFFF3F7FD),
         body: Column(
           children: [
             Expanded(
@@ -28,9 +27,6 @@ class TermAndConditionScreen extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),
                       child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
                         child: Column(
                           children: [
                             Padding(
@@ -244,9 +240,6 @@ class TermAndConditionScreen extends StatelessWidget {
                             child: Text('Tidak'),
                             style: OutlinedButton.styleFrom(
                               side: BorderSide(color: Colors.blue, width: 1.5),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
                             ),
                           ),
                         ),
@@ -265,11 +258,6 @@ class TermAndConditionScreen extends StatelessWidget {
                               );
                             },
                             child: Text('Setuju'),
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                            ),
                           ),
                         )
                       ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 import 'package:sephora/home/home.dart';
 import 'package:sephora/notification/notification.dart';
 import 'package:sephora/register/register1.dart';
@@ -18,10 +19,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Sephora Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: AppTheme.lightTheme,
       home: const NotificationScreen(title: 'Flutter Demo Home Page'),
     );
   }

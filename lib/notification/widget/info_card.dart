@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 
 class InformationCard extends StatelessWidget {
   const InformationCard({
@@ -20,10 +21,6 @@ class InformationCard extends StatelessWidget {
       child: Column(
         children: [
           Card(
-            elevation: 5,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-            ),
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Column(
@@ -53,7 +50,7 @@ class InformationCard extends StatelessWidget {
                     children: [
                       Container(
                         decoration: BoxDecoration(
-                          color: Color(0xFFF3F7FD),
+                          color: AppTheme.background,
                           borderRadius: BorderRadius.circular(12),
                         ),
                         padding: EdgeInsets.all(10),

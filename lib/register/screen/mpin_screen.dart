@@ -17,7 +17,6 @@ class _MpinScreenState extends State<MpinScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFF3F7FD),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -33,9 +32,6 @@ class _MpinScreenState extends State<MpinScreen> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0, bottom: 30.0),
                       child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
                         child: Column(
                           children: [
                             Padding(

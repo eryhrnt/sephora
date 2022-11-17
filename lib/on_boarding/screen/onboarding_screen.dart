@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 import 'package:sephora/on_boarding/widget/language_switcher.dart';
 import 'package:sephora/on_boarding/widget/oboarding_headline.dart';
 import 'package:sephora/on_boarding/widget/onboarding_carousel.dart';
@@ -19,26 +20,26 @@ class _OnBoardingInterfaceState extends State<OnBoardingInterface> {
       child: Scaffold(
         backgroundColor: Color(0xFFF3F7FD),
         body: Container(
+          padding: EdgeInsets.all(AppTheme.mainPadding),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Padding(
-                padding:
-                    const EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      'BANK SEPHORA',
-                      style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xFF2F82FF)),
-                    ),
-                    LanguageSwitcher(isID: (isId) {
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'BANK SEPHORA',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Color(0xFF2F82FF)),
+                  ),
+                  LanguageSwitcher(
+                    isID: (isId) {
                       print(isId ? 'Bahasa' : 'English');
-                    })
-                  ],
-                ),
+                    },
+                  )
+                ],
               ),
               SizedBox(height: 58),
               OnBoardingCarousel(
@@ -56,27 +57,11 @@ class _OnBoardingInterfaceState extends State<OnBoardingInterface> {
               OnBoardingHeadline(
                 controllerPage: _currentPage,
               ),
-              // const Text('Kemudahan dalam Genggaman',
-              //     style: TextStyle(
-              //         fontSize: 18,
-              //         fontWeight: FontWeight.w500,
-              //         color: Color(0xFF464455))),
-              // SizedBox(height: 10),
-              // // ignore: prefer_const_constructors
-              // Padding(
-              //   padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-              //   child: const Text(
-              //     'Hanya dengan 3 langkah registrasi, nikmati segala kemudahan dalam bertransaksi',
-              //     style: TextStyle(
-              //         fontSize: 14,
-              //         fontWeight: FontWeight.w400,
-              //         color: Color(0xFF727FA3)),
-              //     textAlign: TextAlign.center,
-              //   ),
-              // ),
               SizedBox(height: 61),
               ElevatedButton(
-                  onPressed: () {}, child: const Text('Buat Akun Sekarang')),
+                onPressed: () {},
+                child: const Text('Buat Akun Sekarang'),
+              ),
               SizedBox(height: 10),
               TextButton(
                 onPressed: () {},
@@ -86,9 +71,11 @@ class _OnBoardingInterfaceState extends State<OnBoardingInterface> {
                   children: [
                     // ignore: prefer_const_constructors
                     Image(
-                        width: 15,
-                        height: 15,
-                        image: AssetImage('assets/on_boarding/icon_help.png')),
+                      width: 15,
+                      height: 15,
+                      image: AssetImage('assets/on_boarding/icon_help.png'),
+                    ),
+                    SizedBox(width: 6.5),
                     const Text('Butuh Bantuan?')
                   ],
                 ),

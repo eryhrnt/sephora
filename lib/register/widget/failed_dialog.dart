@@ -8,7 +8,6 @@ class FailedDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Dialog(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 18,
@@ -53,9 +52,6 @@ class FailedDialog extends StatelessWidget {
               child: Text('Tutup'),
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(100, 40),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
               ),
             ),
           ],

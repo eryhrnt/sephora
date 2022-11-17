@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({super.key});
@@ -42,9 +43,10 @@ class HomeAppBar extends StatelessWidget {
               Text(
                 '150 points',
                 style: TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.blue),
+                  fontSize: 12,
+                  fontWeight: FontWeight.w500,
+                  color: AppTheme.primary,
+                ),
               ),
             ],
           ),
@@ -53,7 +55,7 @@ class HomeAppBar extends StatelessWidget {
             onPressed: () {},
             icon: Icon(
               Icons.notifications_outlined,
-              color: Colors.blue,
+              color: AppTheme.primary,
               size: 30,
             ))
       ],

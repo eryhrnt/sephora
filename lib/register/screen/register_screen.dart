@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 import 'package:sephora/register/screen/otp_screen.dart';
 import 'package:sephora/register/widget/register_appbar.dart';
 import 'package:sephora/register/widget/next_button.dart';
@@ -16,7 +17,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFFF3F7FD),
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -32,9 +32,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0, bottom: 30.0),
                       child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15),
-                        ),
                         child: Column(
                           children: [
                             Padding(

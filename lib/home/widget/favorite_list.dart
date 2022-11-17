@@ -1,5 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 import 'package:sephora/home/widget/home_section.dart';
 
 class FavoriteList extends StatelessWidget {
@@ -49,9 +50,9 @@ class BorderList extends StatelessWidget {
       children: [
         DottedBorder(
           borderType: BorderType.Circle,
-          dashPattern: [8],
+          dashPattern: [9],
           strokeWidth: 2,
-          color: Colors.blue,
+          color: AppTheme.primary,
           child: Container(
             decoration: BoxDecoration(
               color: Colors.white,
@@ -64,7 +65,7 @@ class BorderList extends StatelessWidget {
               icon: Icon(
                 Icons.add,
                 size: 28,
-                color: Colors.blue,
+                color: AppTheme.primary,
               ),
             ),
           ),

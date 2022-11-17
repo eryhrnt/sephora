@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sephora/app_theme.dart';
 
 class TextRegister extends StatelessWidget {
   const TextRegister({super.key, required this.hint});
@@ -14,13 +15,7 @@ class TextRegister extends StatelessWidget {
         child: TextField(
           obscureText: true,
           decoration: InputDecoration(
-            filled: true,
-            fillColor: Color(0xFFF3F7FD),
             hintText: hint,
-            hintStyle: TextStyle(fontSize: 14),
-            border: OutlineInputBorder(
-              borderSide: BorderSide.none,
-            ),
           ),
         ),
       ),
@@ -44,17 +39,12 @@ class DateRegister extends StatelessWidget {
             child: TextField(
               obscureText: true,
               decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color(0xFFF3F7FD),
-                  hintText: hint,
-                  hintStyle: TextStyle(fontSize: 14),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                  ),
-                  suffixIcon: IconButton(
-                    icon: Icon(Icons.date_range),
-                    onPressed: () {},
-                  )),
+                hintText: hint,
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.date_range),
+                  onPressed: () {},
+                ),
+              ),
             ),
           ),
         ),
@@ -79,17 +69,12 @@ class PasswordText extends StatelessWidget {
             child: TextField(
               obscureText: true,
               decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color(0xFFF3F7FD),
-                  hintText: pass,
-                  hintStyle: TextStyle(fontSize: 14),
-                  border: OutlineInputBorder(
-                    borderSide: BorderSide.none,
-                  ),
-                  suffixIcon: IconButton(
-                    icon: Icon(Icons.remove_red_eye),
-                    onPressed: () {},
-                  )),
+                hintText: pass,
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.remove_red_eye),
+                  onPressed: () {},
+                ),
+              ),
             ),
           ),
         ),
