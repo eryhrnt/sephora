@@ -40,10 +40,6 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 );
               },
             )
-
-            // Expanded(
-            //   child: AllNotification(),
-            // ),
           ],
         ),
       ),
